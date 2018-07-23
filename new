@@ -1,0 +1,13 @@
+#!/bin/bash
+
+while [ 1 ];
+do
+    count=`curl -s "www.youtube.com" | grep -c "Basketball"`
+
+    if [ "$count" != "0" ]
+    then
+       echo "updated!"
+       exit 0   
+    fi
+    sleep 600   
+done

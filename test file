@@ -1,0 +1,13 @@
+#!/bin/bash
+
+webserv=10.1.1.1"
+
+Keyword="helloworld" # enter the keyword for test content
+
+if curl -s "$webserv" | grep "$keyword"
+then
+    # if the keyword is in the conent
+    echo " the website is working fine"
+else
+    echo "Error"
+fi
